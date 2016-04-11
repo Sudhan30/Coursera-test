@@ -1,0 +1,169 @@
+h1{	
+text-align: center;
+font-size: 60px;
+color: blue;
+margin-bottom: 10px;}
+body{
+	background-color: white;
+	font-family: arial;
+}
+* {
+  box-sizing: border-box;
+}
+p {
+	width: 33.33%;
+	height: 200px;
+  	border: 1px solid black;
+  	float: left;
+  	padding: 10px
+}
+#p1{
+	padding-top: 30px;
+	background-color: #0B0B61;
+	color: white;
+}
+#p2{
+	padding-top: 30px;
+	background-color: #FE2E2E;
+	color: white;
+}
+#p3{
+	padding-top: 30px;
+	background-color: #B40431;
+	color: white;
+}
+
+#p4 {
+	width: 10%;
+  	height: 30px;
+  	font-weight: bold;
+  	text-align: center;
+  	background-color: #ff6;
+  	position: relative;
+  	top: -232px;
+  	left: 23.40%;
+  	
+}
+#p5 {
+	width: 10%;
+  	height: 30px;
+  	font-weight: bold;
+  	text-align: center;
+  	background-color: #ff6;
+  	position: relative;
+  	top: -232px;
+  	left: 46.7%;
+  	
+}
+#p6 {
+	width: 10%;
+  	height: 30px;
+  	font-weight: bold;
+  	text-align: center;
+  	background-color: #ff6;
+  	position: relative;
+  	top: -232px;
+  	left: 70%;
+  	
+}
+
+@media (min-width: 992px) {
+  #p {
+    width: 33.33%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #p1 {
+    width: 50%;
+  }
+  #p2 {
+    width: 50%;
+  }
+  #p3 {
+    width: 100%;
+     	}
+
+        #p4 {
+    	width: 10%;
+  		height: 30px;
+  		font-weight: bold;
+  		text-align: center;
+  		background-color: #ff6;	
+  		position: relative;
+  		top: -464px;
+  		left: 40%;
+ }
+
+#p5 {
+    	width: 10%;
+  		height: 30px;
+  		font-weight: bold;
+  		text-align: center;
+  		background-color: #ff6;	
+  		position: relative;
+  		top: -464px;
+  		left: 80%;
+  	}
+#p6 {
+    	width: 10%;
+  		height: 30px;
+  		font-weight: bold;
+  		text-align: center;
+  		background-color: #ff6;	
+  		position: relative;
+  		top: -232px;
+  		left: 70%;
+  	}
+ 
+  }
+
+  @media (max-width: 767px) {
+  #p1 {
+    width: 100%;
+  }
+  #p2 {
+    width: 100%;
+  }
+  #p3 {
+    width: 100%;
+
+    }
+    #p4 {
+    	width: 15%;
+  		height: 30px;
+  		font-size: 0.8em;
+  		font-weight: bold;
+  		text-align: center;
+  		background-color: #ff6;	
+  		position: relative;
+  		top: -693px;
+  		left: 85%;
+  	}
+
+#p5 {
+    	width: 15%;
+  		height: 30px;
+  		font-size: 0.8em;
+  		font-weight: bold;
+  		text-align: center;
+  		background-color: #ff6;	
+  		position: relative;
+  		top: -462px;
+  		left: 70%;
+  	}
+#p6 {
+    	width: 15%;
+  		height: 30px;
+  		font-size: 0.8em;
+  		font-weight: bold;
+  		text-align: center;
+  		background-color: #ff6;	
+  		position: relative;
+  		top: -230px;
+  		left: 55%;
+  	}
+ 
+  }
+
+
