@@ -7,17 +7,17 @@
 <button type="button" onclick="loadDoc()">Request data</button>
 
 <p id="demo"></p>
-
+<div id="Sudhan"></div>
 
 <script>
 function loadDoc() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
-      document.getElementById("demo").innerHTML = xhttp.responseText;
+      document.getElementById("Sudhan").innerHTML = xhttp.responseText;
     }
   };
-  xhttp.open("GET", "index.html", true);
+  xhttp.open("GET", "/data/sudhan.txt", true);
   xhttp.setRequestHeader('Access-Control-Allow-Headers', '*');
   xhttp.send();
 }
