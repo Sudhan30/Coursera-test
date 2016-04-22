@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded",
   			xhttp.send();
         test =JSON.parse(xhttp.responseText);
         console.log(test);
-        document.getElementById("Raj").innerHTML= test.firstName;
+        /*document.getElementById("Raj").innerHTML= test.firstName;*/
 });
 
         
