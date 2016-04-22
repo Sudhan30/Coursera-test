@@ -9,9 +9,6 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
   });
 });
 
-
-
-
 (function (global) {
 
 var dc = {};
@@ -86,8 +83,11 @@ dc.loadMenuCategories = function () {
 };
 
 
-dc.randomCategoryShortName=function () {
-      var xhttp = new XMLHttpRequest();
+// Load the menu items view
+// 'categoryShort' is a short_name for a category
+dc.loadMenuItems = function () {
+        console.log("Sudhan");
+        var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
       if (xhttp.readyState == 4 && xhttp.status == 200) {
           test =JSON.parse(xhttp.responseText);
@@ -102,26 +102,19 @@ dc.randomCategoryShortName=function () {
       var min= 1;
       random= Math.floor((Math.random() * (max - min) + min));
       console.log(random);
-      console.log(test[random].short_name)
-
-          document.getElementById("Raj").innerHTML= test.short_name;
-
+      console.log(test[random].short_name);
+      dc.categoryShort=test[random].short_name;
+      console.log(dc.categoryShort);
       }
         };
         xhttp.open("GET","http://davids-restaurant.herokuapp.com/categories.json", false);
-        xhttp.setRequestHeader('Access-Control-Allow-Headers', '*');
         xhttp.send();
-        return test[random].short_name;
-};
 
+        console.log(dc.categoryShort);
 
-
-// Load the menu items view
-// 'categoryShort' is a short_name for a category
-dc.loadMenuItems = function (categoryShort) {
   showLoading("#main-content");
   $ajaxUtils.sendGetRequest(
-    menuItemsUrl + categoryShort,
+    menuItemsUrl + dc.categoryShort,
     buildAndShowMenuItemsHTML);
 };
 
@@ -305,7 +298,6 @@ function insertItemPortionName(html,
   html = insertProperty(html, portionPropName, portionValue);
   return html;
 }
-
 
 
 global.$dc = dc;
