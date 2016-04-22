@@ -8,14 +8,15 @@ document.addEventListener("DOMContentLoaded",
   		xhttp.onreadystatechange = function() {
     	if (xhttp.readyState == 4 && xhttp.status == 200) {
       		document.getElementById("Sudhan").innerHTML = xhttp.responseText;
-           test =JSON.parse(xhttp.responseText);
-           console.log(test);
-           document.getElementById("Raj").innerHTML= test;
+
     	}
   			};
   			xhttp.open("GET", "./Data/name.json", true);
   			xhttp.setRequestHeader('Access-Control-Allow-Headers', '*');
   			xhttp.send();
+        test =JSON.parse(xhttp.responseText);
+        console.log(test);
+        document.getElementById("Raj").innerHTML= test;
 });
 
         
